@@ -1,0 +1,28 @@
+<style>
+    b{
+        color: rgb(190, 12, 12);
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+</style>
+{% extends 'landing.html' %}
+
+{% block content %}
+    <h3 style="color:darkgreen">{{pros.name}}</h3><br>
+    <br>
+    <div style="border: 4px solid rgb(194, 56, 166); width: 40%;">
+   <b>Description:</b>&nbsp;{{pros.description}}<br>
+   <b>Features:</b>&nbsp;{{pros.features}}<br>
+   <b>Price:</b>&nbsp;&#x20B9;&nbsp;{{pros.price}}<br>
+   <b>Star:</b>&nbsp;{{pros.star}}<br>
+    </div>
+    
+   <br>
+  <form action="/home/addtocart">
+    <input type="hidden" name="proid" value="{{pros.id}}">
+    Quantity<input min="0" max="100" type="number" name="qty">
+    <input type="submit"  value="Add to cart">
+  </form>
+   {% endblock %}
+

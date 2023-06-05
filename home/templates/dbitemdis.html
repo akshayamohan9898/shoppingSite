@@ -1,0 +1,15 @@
+
+{% extends 'landing.html' %}
+
+{% block content %}
+
+<h2 style="color: darkred;">Electronics</h2>
+
+    {% for i in pros %}
+   
+   <a href="/home/details/{{i.id}}">{{i.id}}.{{i.name}}</a><br>
+  
+   <br>
+   {% endfor %}
+
+   {% endblock %}

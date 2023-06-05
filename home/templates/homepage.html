@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome  To Home Page</h1>
+   <h2> {{category}}</h2><br>
+    <br>
+   {% for i in products %}
+   <table border="3" style="margin:20px">
+   {% for k,v in i.items %}
+   <tr>
+    <td>{{k}}</td>
+    <td>{% if k == 'spec' %}
+          {% for f in v %}
+          <li>{{f}}</li>
+          {% endfor %}
+    {% else %}
+       {{v}}
+    {% endif %}
+    </td>
+    </tr>
+   {% endfor %}
+   <br>
+   {% endfor %}
+   </table>
+
+</body>
+</html>

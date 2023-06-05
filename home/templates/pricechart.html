@@ -1,0 +1,16 @@
+{% extends 'landing.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/chart.js'%}"></script>
+<body>
+    <input type="button" value="Chart" onclick="takedrawdata()">
+    <div id="data"></div>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+</body>
+{% endblock %}

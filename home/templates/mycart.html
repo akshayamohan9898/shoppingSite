@@ -1,0 +1,35 @@
+ {% extends 'landing.html' %} 
+
+ {% block content %}
+
+ <br>
+ <table border="2px solid" style="border-color: rgb(114, 11, 210);;">
+    <tr>
+        <th>product id</th>
+        <th>Quantity</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>features</th>
+        <th>Total</th>
+    </tr>
+    {% for i in alldata %}
+    <tr>
+ <td>{{i.proID}}</td>
+<td>{{i.Quantity}}</td>
+<td>{{i.Name}}</td>
+<td>{{i.Price}}</td>
+<td>{{i.Features}}</td>
+<td>{{i.Total}}</td>
+</tr>
+{% endfor %}
+<tfoot>
+    <tr>
+      <td colspan="5" style="text-align: right;">Your cart Total Amount</td>
+      <td>{{full}}</td>
+    </tr>
+   </tfoot>
+
+</table>
+
+
+ {% endblock %}
